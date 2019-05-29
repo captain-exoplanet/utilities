@@ -28,6 +28,10 @@ Various generally useful codes and scripts.
   ```
   Parameter name & $1.0 \pm 0.5$ & $1.0_{-0.3}^{+0.4}$ \\
   ```
+  Would be returned as:
+  ```
+  np.array([1.0, 0.5, 0.5, 1.0, 0.4, 0.3])
+  ```
   Uncertainties must be specified as in this example in order for the code to properly parse the table.
   
   Dependencies: numpy. I typically use readcol.py (https://github.com/keflavich/agpy/blob/master/agpy/readcol.py) to read in table data, but any method to read an ascii LaTeX table into a string array will work.
