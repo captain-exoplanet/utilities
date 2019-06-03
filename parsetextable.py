@@ -7,7 +7,7 @@ def parsetextable(tablein,ecolumns):
     for i in range (0,necolumns):
         for j in range (0,nrows):
             temp=tablein[j,ecolumns[i]]
-            temp=temp.translate(None, '$ {}_^\')#remove special characters
+            temp=temp.translate(None, '$ {}_^\\')#remove special characters
             if 'pm' in temp:
                 temp2=temp.split('pm')
                 temparray[j,i*3]=np.float(temp2[0])
